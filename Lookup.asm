@@ -1,0 +1,11 @@
+	AREA LOOKUP, CODE, READONLY
+	LDR r0, =SOURCE
+	LDR r1, =7
+	MOV r1, r1, LSL #2
+	ADD r0, r0, r1
+	LDR r3, [r0]
+STOP
+	B STOP
+SOURCE
+	DCD 0x0, 0x1, 0x4, 0x9, 0x10, 0x19, 0x24, 0x31, 0x40, 0x51
+	END
